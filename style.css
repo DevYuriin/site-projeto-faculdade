@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: whitesmoke;
+}
+
+body {
+  background-image: linear-gradient(
+    90deg,
+    rgba(20, 0, 113, 1) 15.3%,
+    rgba(1, 0, 62, 1) 91.3%
+  );
+}
+
+.topicos {
+  font-size: 25px;
+  text-align: center;
+  padding: 20px;
+  word-spacing: 10px;
+}
+
+.log {
+  text-align: center;
+  font-size: 70px;
+  margin-top: 5px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 1000;
+  color: #ffffff;
+  text-shadow: 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #49ff18,
+    0 0 1px #49ff18, 0 0 1px #49ff18, 0 0 1px #49ff18, 0 0 1px #49ff18;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;   
+  /* Outras propriedades como altura para o container podem ser necessárias */
+  height: 300px; /* Exemplo: para centralizar na altura da tela */
+}
+
+.caixa {
+  width: 300px;
+  height: 300px;
+  padding: 30px;
+  margin-top: 40px;
+  background-color: red; /* Apenas para visualizar a caixa */
+  text-align: center;
+  font-size: 30px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 30px;
+}
