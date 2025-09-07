@@ -13,13 +13,42 @@ body {
   );
 }
 
-.topicos {
-  font-size: 25px;
-  text-align: center;
-  padding: 20px;
-  word-spacing: 10px;
+/* Container do menu */
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
+/* Cada tópico do menu */
+.topico {
+  padding: 10px 20px;
+  text-align: center;
+  min-width: 120px;
+}
+
+/* Remove a bolinha da lista */
+.topico ul {
+  list-style: none;
+}
+
+/* Links do menu */
+.topico a {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* Efeito hover */
+.topico a:hover {
+  color: #49ff18; /* verde neon */
+  text-shadow: 0 0 5px #49ff18, 0 0 10px #49ff18;
+}
+
+/* Logo */
 .log {
   text-align: center;
   font-size: 70px;
@@ -31,15 +60,17 @@ body {
     0 0 1px #49ff18, 0 0 1px #49ff18, 0 0 1px #49ff18, 0 0 1px #49ff18;
 }
 
-.container {
+/* Container para outras seções (se for usar depois) */
+.containers {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px;   
-  /* Outras propriedades como altura para o container podem ser necessárias */
-  height: 300px; /* Exemplo: para centralizar na altura da tela */
+  gap: 30px;
+  height: 300px; /* Exemplo de altura */
+  margin-top: 30px;
 }
 
+/* Caixas de conteúdo (exemplo) */
 .caixa {
   width: 300px;
   height: 300px;
