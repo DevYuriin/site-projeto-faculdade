@@ -11,7 +11,7 @@
       <div class="container">
         <div class="topico">
           <ul>
-            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html">Início</a></li>
           </ul>
         </div>
 
@@ -29,32 +29,91 @@
       </div>
       <div class="log">Física</div>
     </header>
-  </body>
-  <script>
-    // Fade-in ao carregar a página
-    window.addEventListener("DOMContentLoaded", () => {
-      document.body.classList.add("loaded");
-    });
 
-    // Fade-in ao voltar com botão "Voltar" do navegador
-    window.addEventListener("pageshow", () => {
-      document.body.classList.add("loaded");
-    });
+    <!-- Abas -->
+    <div class="tabs">
+      <div class="tab active" data-tab="basico">Básico</div>
+      <div class="tab" data-tab="intermediario">Intermediário</div>
+      <div class="tab" data-tab="avancado">Avançado</div>
+    </div>
 
-    // Fade-out ao clicar em qualquer link
-    const links = document.querySelectorAll("a");
-    links.forEach((link) => {
-      link.addEventListener("click", function (e) {
-        const href = this.getAttribute("href");
-        // Ignora links com # ou vazios
-        if (!href || href.startsWith("#")) return;
+    <!-- Conteúdos -->
+    <div id="basico" class="tab-content active">
+      <h2 class="ajeitar-texto">Básico</h2>
+      <p class="ajeitar-texto">
+        Introdução à Física: conceitos fundamentais e noções iniciais de
+        movimento e forças.
+      </p>
+      <ul class="ajeitar-texto">
+        <li>Movimento uniforme e acelerado</li>
+        <li>Leis de Newton básicas</li>
+        <li>Grandezas físicas e unidades</li>
+      </ul>
+    </div>
 
-        e.preventDefault();
-        document.body.classList.remove("loaded"); // inicia fade-out
-        setTimeout(() => {
-          window.location.href = href;
-        }, 600); // tempo igual ao transition
+    <div id="intermediario" class="tab-content">
+      <h2 class="ajeitar-texto">Intermediário</h2>
+      <p class="ajeitar-texto">
+        Estudo de energia, trabalho, leis de conservação e problemas aplicados.
+      </p>
+      <ul class="ajeitar-texto">
+        <li>Energia cinética e potencial</li>
+        <li>Trabalho e potência</li>
+        <li>Leis de conservação de energia e momentum</li>
+      </ul>
+    </div>
+
+    <div id="avancado" class="tab-content">
+      <h2 class="ajeitar-texto">Avançado</h2>
+      <p class="ajeitar-texto">
+        Conceitos avançados de Física, incluindo eletromagnetismo e óptica.
+      </p>
+      <ul class="ajeitar-texto">
+        <li>Campos elétricos e magnéticos</li>
+        <li>Leis de Maxwell básicas</li>
+        <li>Óptica, luz e fenômenos de refração/reflexão</li>
+      </ul>
+    </div>
+
+    <script>
+      // Fade-in ao carregar a página
+      window.addEventListener("DOMContentLoaded", () => {
+        document.body.classList.add("loaded");
       });
-    });
-  </script>
+
+      // Fade-in ao voltar com botão "Voltar" do navegador
+      window.addEventListener("pageshow", () => {
+        document.body.classList.add("loaded");
+      });
+
+      // Fade-out ao clicar em qualquer link
+      const links = document.querySelectorAll("a");
+      links.forEach((link) => {
+        link.addEventListener("click", function (e) {
+          const href = this.getAttribute("href");
+          if (!href || href.startsWith("#")) return;
+
+          e.preventDefault();
+          document.body.classList.remove("loaded"); // inicia fade-out
+          setTimeout(() => {
+            window.location.href = href;
+          }, 600);
+        });
+      });
+
+      // Controle das abas
+      const tabs = document.querySelectorAll(".tab");
+      const contents = document.querySelectorAll(".tab-content");
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          tabs.forEach((t) => t.classList.remove("active"));
+          contents.forEach((c) => c.classList.remove("active"));
+
+          tab.classList.add("active");
+          document.getElementById(tab.dataset.tab).classList.add("active");
+        });
+      });
+    </script>
+  </body>
 </html>

@@ -11,7 +11,7 @@
       <div class="container">
         <div class="topico">
           <ul>
-            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html">Início</a></li>
           </ul>
         </div>
 
@@ -29,32 +29,91 @@
       </div>
       <div class="log">Química</div>
     </header>
-  </body>
-  <script>
-    // Fade-in ao carregar a página
-    window.addEventListener("DOMContentLoaded", () => {
-      document.body.classList.add("loaded");
-    });
 
-    // Fade-in ao voltar com botão "Voltar" do navegador
-    window.addEventListener("pageshow", () => {
-      document.body.classList.add("loaded");
-    });
+    <!-- Abas -->
+    <div class="tabs">
+      <div class="tab active" data-tab="basico">Básico</div>
+      <div class="tab" data-tab="intermediario">Intermediário</div>
+      <div class="tab" data-tab="avancado">Avançado</div>
+    </div>
 
-    // Fade-out ao clicar em qualquer link
-    const links = document.querySelectorAll("a");
-    links.forEach((link) => {
-      link.addEventListener("click", function (e) {
-        const href = this.getAttribute("href");
-        // Ignora links com # ou vazios
-        if (!href || href.startsWith("#")) return;
+    <!-- Conteúdos -->
+    <div id="basico" class="tab-content active">
+      <h2 class="ajeitar-texto">Básico</h2>
+      <p class="ajeitar-texto">
+        Introdução à Química: conceitos fundamentais e noções iniciais sobre
+        matéria e substâncias.
+      </p>
+      <ul class="ajeitar-texto">
+        <li>Átomos e moléculas</li>
+        <li>Estados físicos da matéria</li>
+        <li>Elementos químicos e tabelas periódicas básicas</li>
+      </ul>
+    </div>
 
-        e.preventDefault();
-        document.body.classList.remove("loaded"); // inicia fade-out
-        setTimeout(() => {
-          window.location.href = href;
-        }, 600); // tempo igual ao transition
+    <div id="intermediario" class="tab-content">
+      <h2 class="ajeitar-texto">Intermediário</h2>
+      <p class="ajeitar-texto">
+        Aprendendo reações químicas, ligações e equações químicas simples.
+      </p>
+      <ul class="ajeitar-texto">
+        <li>Ligações químicas (iônica, covalente, metálica)</li>
+        <li>Equações químicas balanceadas</li>
+        <li>Reações ácido-base e óxidoredução básicas</li>
+      </ul>
+    </div>
+
+    <div id="avancado" class="tab-content">
+      <h2 class="ajeitar-texto">Avançado</h2>
+      <p class="ajeitar-texto">
+        Conceitos avançados de química, estequiometria e estudos aplicados.
+      </p>
+      <ul class="ajeitar-texto">
+        <li>Estequiometria e cálculos químicos</li>
+        <li>Reações complexas e cinética química</li>
+        <li>Química orgânica básica e hidrocarbonetos</li>
+      </ul>
+    </div>
+
+    <script>
+      // Fade-in ao carregar a página
+      window.addEventListener("DOMContentLoaded", () => {
+        document.body.classList.add("loaded");
       });
-    });
-  </script>
+
+      // Fade-in ao voltar com botão "Voltar" do navegador
+      window.addEventListener("pageshow", () => {
+        document.body.classList.add("loaded");
+      });
+
+      // Fade-out ao clicar em qualquer link
+      const links = document.querySelectorAll("a");
+      links.forEach((link) => {
+        link.addEventListener("click", function (e) {
+          const href = this.getAttribute("href");
+          if (!href || href.startsWith("#")) return;
+
+          e.preventDefault();
+          document.body.classList.remove("loaded"); // inicia fade-out
+          setTimeout(() => {
+            window.location.href = href;
+          }, 600);
+        });
+      });
+
+      // Controle das abas
+      const tabs = document.querySelectorAll(".tab");
+      const contents = document.querySelectorAll(".tab-content");
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          tabs.forEach((t) => t.classList.remove("active"));
+          contents.forEach((c) => c.classList.remove("active"));
+
+          tab.classList.add("active");
+          document.getElementById(tab.dataset.tab).classList.add("active");
+        });
+      });
+    </script>
+  </body>
 </html>

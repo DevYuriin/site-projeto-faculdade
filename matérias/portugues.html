@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="portugues.css" />
     <title>Português</title>
   </head>
   <body>
@@ -11,7 +12,7 @@
       <div class="container">
         <div class="topico">
           <ul>
-            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html">Início</a></li>
           </ul>
         </div>
 
@@ -29,32 +30,91 @@
       </div>
       <div class="log">Português</div>
     </header>
-  </body>
-  <script>
-    // Fade-in ao carregar a página
-    window.addEventListener("DOMContentLoaded", () => {
-      document.body.classList.add("loaded");
-    });
 
-    // Fade-in ao voltar com botão "Voltar" do navegador
-    window.addEventListener("pageshow", () => {
-      document.body.classList.add("loaded");
-    });
+    <!-- Abas -->
+    <div class="tabs">
+      <div class="tab active" data-tab="basico">Básico</div>
+      <div class="tab" data-tab="intermediario">Intermediário</div>
+      <div class="tab" data-tab="avancado">Avançado</div>
+    </div>
 
-    // Fade-out ao clicar em qualquer link
-    const links = document.querySelectorAll("a");
-    links.forEach((link) => {
-      link.addEventListener("click", function (e) {
-        const href = this.getAttribute("href");
-        // Ignora links com # ou vazios
-        if (!href || href.startsWith("#")) return;
+    <!-- Conteúdos -->
+    <div id="basico" class="tab-content active">
+      <h2 class="ajeitar-texto">Básico</h2>
+      <p class="ajeitar-texto">
+        Fundamentos da língua portuguesa, gramática inicial e vocabulário
+        básico.
+      </p>
+      <ul class="ajeitar-texto">
+        <li>Alfabeto e fonética</li>
+        <li>Palavras e frases simples</li>
+        <li>Ortografia básica e acentuação</li>
+      </ul>
+    </div>
 
-        e.preventDefault();
-        document.body.classList.remove("loaded"); // inicia fade-out
-        setTimeout(() => {
-          window.location.href = href;
-        }, 600); // tempo igual ao transition
+    <div id="intermediario" class="tab-content">
+      <h2 class="ajeitar-texto">Intermediário</h2>
+      <p class="ajeitar-texto">
+        Gramática intermediária, interpretação de textos e redação básica.
+      </p>
+      <ul class="ajeitar-texto">
+        <li>Classes de palavras (substantivo, verbo, adjetivo)</li>
+        <li>Concordância verbal e nominal</li>
+        <li>Interpretação de pequenos textos</li>
+      </ul>
+    </div>
+
+    <div id="avancado" class="tab-content">
+      <h2 class="ajeitar-texto">Avançado</h2>
+      <p class="ajeitar-texto">
+        Redação avançada, literatura e análise crítica de textos.
+      </p>
+      <ul class="ajeitar-texto">
+        <li>Estrutura de textos e redação dissertativa</li>
+        <li>Figuras de linguagem e interpretação complexa</li>
+        <li>Literatura clássica e moderna</li>
+      </ul>
+    </div>
+
+    <script>
+      // Fade-in ao carregar a página
+      window.addEventListener("DOMContentLoaded", () => {
+        document.body.classList.add("loaded");
       });
-    });
-  </script>
+
+      // Fade-in ao voltar com botão "Voltar" do navegador
+      window.addEventListener("pageshow", () => {
+        document.body.classList.add("loaded");
+      });
+
+      // Fade-out ao clicar em qualquer link
+      const links = document.querySelectorAll("a");
+      links.forEach((link) => {
+        link.addEventListener("click", function (e) {
+          const href = this.getAttribute("href");
+          if (!href || href.startsWith("#")) return;
+
+          e.preventDefault();
+          document.body.classList.remove("loaded"); // inicia fade-out
+          setTimeout(() => {
+            window.location.href = href;
+          }, 600);
+        });
+      });
+
+      // Controle das abas
+      const tabs = document.querySelectorAll(".tab");
+      const contents = document.querySelectorAll(".tab-content");
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          tabs.forEach((t) => t.classList.remove("active"));
+          contents.forEach((c) => c.classList.remove("active"));
+
+          tab.classList.add("active");
+          document.getElementById(tab.dataset.tab).classList.add("active");
+        });
+      });
+    </script>
+  </body>
 </html>

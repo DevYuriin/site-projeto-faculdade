@@ -1,3 +1,4 @@
+/* ================== RESET E BASE ================== */
 * {
   margin: 0;
   padding: 0;
@@ -12,10 +13,6 @@ body {
     rgb(0, 0, 0) 61.3%
   );
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* Fade-in/fade-out da página */
-body {
   opacity: 0;
   transition: opacity 0.6s ease-in-out;
 }
@@ -24,42 +21,43 @@ body.loaded {
   opacity: 1;
 }
 
-/* Container do menu */
+main {
+  padding: 40px;
+  text-align: center;
+  min-height: 40vh;
+}
+
+/* ================== MENU E LOGO ================== */
 .container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
-/* Cada tópico do menu */
 .topico {
   padding: 10px 20px;
   text-align: center;
   min-width: 120px;
 }
 
-/* Remove a bolinha da lista */
 .topico ul {
   list-style: none;
 }
 
-/* Links do menu */
 .topico a {
   text-decoration: none;
   color: white;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bold;
   transition: 0.3s;
 }
 
-/* Efeito hover no menu */
 .topico a:hover {
   color: #ffffff;
   text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff;
 }
 
-/* Logo */
 .log {
   text-align: center;
   font-size: 70px;
@@ -70,17 +68,16 @@ body.loaded {
     0 0 1px #ffffff, 0 0 1px #ffffff, 0 0 1px #ffffff, 0 0 1px #ffffff;
 }
 
-/* Container das caixas */
+/* ================== CAIXAS DE CONTEÚDO ================== */
 .containers {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 30px;
   margin-top: 30px;
-  flex-wrap: wrap; /* permite quebrar linha em telas pequenas */
+  flex-wrap: wrap;
 }
 
-/* Caixas de conteúdo (links) */
 .caixa {
   display: flex;
   align-items: center;
@@ -92,26 +89,70 @@ body.loaded {
   text-align: center;
   font-size: 30px;
   border-radius: 25px;
-  text-decoration: none; /* remove sublinhado */
+  text-decoration: none;
   color: rgb(0, 0, 0);
   font-weight: bold;
   transition: 0.3s;
-  flex-shrink: 0; /* evita encolher demais no desktop */
+  flex-shrink: 0;
 }
 
-/* Efeito hover nas caixas */
 .caixa:hover {
   background-color: #ffffff;
   box-shadow: 0 0 10px #ffffff, 0 0 10px #ffffff, 0 0 10px #ffffff,
     0 0 10px #ffffff;
-  transform: scale(1.01); /* aumenta o tamanho */
+  transform: scale(1.01);
+}
+
+/* ================== ABAS E CONTEÚDOS ================== */
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #00a6ff;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.tab.active {
+  background-color: #49ff18;
+  color: #000;
+  box-shadow: 0 0 10px #49ff18;
+}
+
+.tab-content {
+  display: none;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.308);
+  border-radius: 15px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.ajeitar-texto {
+  padding-left: 15px;
+  margin-top: 2px;
 }
 
 /* ================== MEDIA QUERIES ================== */
 /* Tablets */
 @media (max-width: 1024px) {
   .caixa {
-    width: 45%; /* duas caixas por linha */
+    width: 45%;
     height: 250px;
     font-size: 25px;
   }
@@ -120,7 +161,7 @@ body.loaded {
 /* Celulares */
 @media (max-width: 600px) {
   .caixa {
-    width: 90%; /* uma caixa por linha */
+    width: 90%;
     height: 200px;
     font-size: 20px;
   }
@@ -131,5 +172,14 @@ body.loaded {
 
   .log {
     font-size: 50px;
+  }
+
+  .tabs {
+    gap: 5px;
+  }
+
+  .tab {
+    padding: 8px 15px;
+    font-size: 16px;
   }
 }
