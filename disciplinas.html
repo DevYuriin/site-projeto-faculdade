@@ -38,4 +38,31 @@
       <a href="/matérias/fisica.html" class="caixa">Física</a>
     </main>
   </body>
+  <script>
+    // Fade-in ao carregar a página
+    window.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add("loaded");
+    });
+
+    // Fade-in ao voltar com botão "Voltar" do navegador
+    window.addEventListener("pageshow", () => {
+      document.body.classList.add("loaded");
+    });
+
+    // Fade-out ao clicar em qualquer link
+    const links = document.querySelectorAll("a");
+    links.forEach((link) => {
+      link.addEventListener("click", function (e) {
+        const href = this.getAttribute("href");
+        // Ignora links com # ou vazios
+        if (!href || href.startsWith("#")) return;
+
+        e.preventDefault();
+        document.body.classList.remove("loaded"); // inicia fade-out
+        setTimeout(() => {
+          window.location.href = href;
+        }, 600); // tempo igual ao transition
+      });
+    });
+  </script>
 </html>

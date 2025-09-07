@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Física</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="topico">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+          </ul>
+        </div>
+
+        <div class="topico">
+          <ul>
+            <li><a href="../disciplinas.html">Disciplinas</a></li>
+          </ul>
+        </div>
+
+        <div class="topico">
+          <ul>
+            <li><a href="../contatos.html">Contatos</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="log">Física</div>
+    </header>
+  </body>
+  <script>
+    // Fade-in ao carregar a página
+    window.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add("loaded");
+    });
+
+    // Fade-in ao voltar com botão "Voltar" do navegador
+    window.addEventListener("pageshow", () => {
+      document.body.classList.add("loaded");
+    });
+
+    // Fade-out ao clicar em qualquer link
+    const links = document.querySelectorAll("a");
+    links.forEach((link) => {
+      link.addEventListener("click", function (e) {
+        const href = this.getAttribute("href");
+        // Ignora links com # ou vazios
+        if (!href || href.startsWith("#")) return;
+
+        e.preventDefault();
+        document.body.classList.remove("loaded"); // inicia fade-out
+        setTimeout(() => {
+          window.location.href = href;
+        }, 600); // tempo igual ao transition
+      });
+    });
+  </script>
+</html>
