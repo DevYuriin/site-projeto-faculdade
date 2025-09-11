@@ -3,18 +3,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: whitesmoke;
 }
 
 body {
-  background-image: linear-gradient(
-    90deg,
-    rgb(26, 0, 144) 15.3%,
-    rgb(0, 0, 0) 61.3%
-  );
+  background-image: linear-gradient(90deg,
+      rgb(26, 0, 144) 15.3%,
+      rgb(0, 0, 0) 61.3%);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   opacity: 0;
   transition: opacity 0.6s ease-in-out;
+  color: #fff;
 }
 
 body.loaded {
@@ -115,24 +113,24 @@ main {
 .tab {
   padding: 10px 20px;
   cursor: pointer;
-  background-color: #00a6ff;
-  color: white;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
   border-radius: 8px;
   font-weight: bold;
   transition: 0.3s;
 }
 
 .tab.active {
-  background-color: #49ff18;
+  background-color: #ffffff;
   color: #000;
-  box-shadow: 0 0 10px #49ff18;
+  box-shadow: 0 0 10px #ffffff;
 }
 
 .tab-content {
   display: none;
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 40px;
   background-color: rgba(255, 255, 255, 0.308);
   border-radius: 15px;
   font-size: 18px;
@@ -146,6 +144,76 @@ main {
 .ajeitar-texto {
   padding-left: 15px;
   margin-top: 2px;
+  color: white;
+}
+
+/* ================== EXERCÍCIOS ================== */
+
+/* Container do Quiz */
+#quiz-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  /* Leve fundo branco para o quiz */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.2);
+  margin-top: 20px;
+}
+
+#quiz-container h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 45px;
+  color: #333;
+}
+
+#question-container {
+  margin-bottom: 10px;
+}
+
+button.answer {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 20px;
+  margin-top: 10px;
+  margin-left: 0px;
+  padding-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+button.answer:hover {
+  background-color: #45a049;
+}
+
+#feedback {
+  margin-top: 20px;
+  display: none;
+}
+
+#feedback p {
+  font-weight: bold;
+  font-size: 20px;
+  color: #333;
+}
+
+#question-basico-1,
+#question-basico-2,
+#question-basico-3 {
+  color: #ffffff;
+  padding-top: 5px;
+}
+
+.meucu {
+  margin-top: 30px;
+  color: #fff;
+}
+
+#basico-finished {
+  color: #fff;
 }
 
 /* ================== MEDIA QUERIES ================== */
@@ -156,6 +224,10 @@ main {
     height: 250px;
     font-size: 25px;
   }
+
+  #quiz-container {
+    width: 80%;
+  }
 }
 
 /* Celulares */
@@ -164,6 +236,11 @@ main {
     width: 90%;
     height: 200px;
     font-size: 20px;
+  }
+
+  #quiz-container {
+    width: 90%;
+    padding: 15px;
   }
 
   .topico a {
@@ -181,5 +258,14 @@ main {
   .tab {
     padding: 8px 15px;
     font-size: 16px;
+  }
+
+  #quiz-container h3 {
+    font-size: 18px;
+  }
+
+  button.answer {
+    font-size: 16px;
+    padding: 8px 15px;
   }
 }

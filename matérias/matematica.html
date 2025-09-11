@@ -1,121 +1,279 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../style.css" />
-    <title>Matemática</title>
-  </head>
-  <body>
-    <header>
-      <div class="container">
-        <div class="topico">
-          <ul>
-            <li><a href="../index.html">Início</a></li>
-          </ul>
-        </div>
 
-        <div class="topico">
-          <ul>
-            <li><a href="../disciplinas.html">Disciplinas</a></li>
-          </ul>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../style.css" />
+  <title>Matemática</title>
+</head>
 
-        <div class="topico">
-          <ul>
-            <li><a href="../contatos.html">Contatos</a></li>
-          </ul>
+<body>
+  <header>
+    <div class="container">
+      <div class="topico">
+        <ul>
+          <li><a href="../index.html">Início</a></li>
+        </ul>
+      </div>
+
+      <div class="topico">
+        <ul>
+          <li><a href="../disciplinas.html">Disciplinas</a></li>
+        </ul>
+      </div>
+
+      <div class="topico">
+        <ul>
+          <li><a href="../contatos.html">Contatos</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="log">Matemática</div>
+  </header>
+
+  <!-- Abas -->
+  <div class="tabs">
+    <div class="tab active" data-tab="basico">Básico</div>
+    <div class="tab" data-tab="intermediario">Intermediário</div>
+    <div class="tab" data-tab="avancado">Avançado</div>
+  </div>
+
+  <!-- Conteúdos -->
+  <div id="basico" class="tab-content active">
+    <h2 class="ajeitar-texto">Básico</h2>
+    <p class="ajeitar-texto">Introdução aos números, operações básicas e conceitos fundamentais de matemática.</p>
+    <ul class="ajeitar-texto">
+      <li>Adição e subtração</li>
+      <li>Multiplicação e divisão</li>
+      <li>Exemplos simples e exercícios</li>
+    </ul>
+
+    <!-- Quiz do Básico -->
+    <div id="quiz-container-basico" class="quiz-container">
+
+      <!-- Questão 1 -->
+      <div id="quiz-container-basico-1" class="quiz-block" style="display:block;">
+        <h3 class="meucu">Exercício 1: Qual é o resultado da operação?</h3>
+        <div class="question-area">
+          <p id="question-basico-1">Quanto é 8 + 5?</p>
+          <div class="answers">
+            <button class="answer" data-value="13">13</button>
+            <button class="answer" data-value="12">12</button>
+            <button class="answer" data-value="14">14</button>
+            <button class="answer" data-value="15">15</button>
+          </div>
+        </div>
+        <div id="feedback-basico-1" class="feedback" style="display: none;">
+          <!-- adicionei a classe feedback-text para o seletor do JS -->
+          <p id="feedback-text-basico-1" class="feedback-text"></p>
+          <button class="next">Próxima Pergunta</button>
         </div>
       </div>
-      <div class="log">Matemática</div>
-    </header>
 
-    <!-- Abas -->
-    <div class="tabs">
-      <div class="tab active" data-tab="basico">Básico</div>
-      <div class="tab" data-tab="intermediario">Intermediário</div>
-      <div class="tab" data-tab="avancado">Avançado</div>
-    </div>
+      <!-- Questão 2 -->
+      <div id="quiz-container-basico-2" class="quiz-block" style="display:none;">
+        <h3 class="meucu">Exercício 2: Qual é o resultado da operação?</h3>
+        <div class="question-area">
+          <p id="question-basico-2">Quanto é 10 - 3?</p>
+          <div class="answers">
+            <button class="answer" data-value="7">7</button>
+            <button class="answer" data-value="6">6</button>
+            <button class="answer" data-value="8">8</button>
+            <button class="answer" data-value="5">5</button>
+          </div>
+        </div>
+        <div id="feedback-basico-2" class="feedback" style="display: none;">
+          <p id="feedback-text-basico-2" class="feedback-text"></p>
+          <button class="next">Próxima Pergunta</button>
+        </div>
+      </div>
 
-    <!-- Conteúdos -->
-    <div id="basico" class="tab-content active">
-      <h2 class="ajeitar-texto">Básico</h2>
-      <p class="ajeitar-texto">
-        Introdução aos números, operações básicas e conceitos fundamentais de
-        matemática.
-      </p>
-      <ul class="ajeitar-texto">
-        <li>Adição e subtração</li>
-        <li>Multiplicação e divisão</li>
-        <li>Exemplos simples e exercícios</li>
-      </ul>
-    </div>
+      <!-- Questão 3 -->
+      <div id="quiz-container-basico-3" class="quiz-block" style="display:none;">
+        <h3 class="meucu">Exercício 3: Qual é o resultado da operação?</h3>
+        <div class="question-area">
+          <p id="question-basico-3">Quanto é 4 + 6?</p>
+          <div class="answers">
+            <button class="answer" data-value="10">10</button>
+            <button class="answer" data-value="9">9</button>
+            <button class="answer" data-value="11">11</button>
+            <button class="answer" data-value="8">8</button>
+          </div>
+        </div>
+        <div id="feedback-basico-3" class="feedback" style="display: none;">
+          <p id="feedback-text-basico-3" class="feedback-text"></p>
+          <button class="next">Próxima Pergunta</button>
+        </div>
+      </div>
 
-    <div id="intermediario" class="tab-content">
-      <h2 class="ajeitar-texto">Intermediário</h2>
-      <p class="ajeitar-texto">
-        Aprendendo frações, porcentagens, equações simples e problemas
-        aplicados.
-      </p>
-      <ul class="ajeitar-texto">
-        <li>Frações e decimais</li>
-        <li>Porcentagens e proporções</li>
-        <li>Equações do 1º grau</li>
-      </ul>
-    </div>
+      <div id="basico-finished" style="display:none; margin-top:12px;">
+        <strong>Parabéns, você completou o exercício básico!</strong>
+      </div>
 
-    <div id="avancado" class="tab-content">
-      <h2 class="ajeitar-texto">Avançado</h2>
-      <p class="ajeitar-texto">
-        Conceitos avançados, resolução de problemas complexos e preparação para
-        desafios.
-      </p>
-      <ul class="ajeitar-texto">
-        <li>Equações do 2º grau</li>
-        <li>Funções e gráficos</li>
-        <li>Problemas desafiadores</li>
-      </ul>
-    </div>
+    </div> <!-- fim quiz-container-basico -->
 
-    <script>
-      // Fade-in ao carregar a página
-      window.addEventListener("DOMContentLoaded", () => {
-        document.body.classList.add("loaded");
-      });
+  </div> <!-- fim basico -->
 
-      // Fade-in ao voltar com botão "Voltar" do navegador
-      window.addEventListener("pageshow", () => {
-        document.body.classList.add("loaded");
-      });
+  <div id="intermediario" class="tab-content">
+    <h2 class="ajeitar-texto">Intermediário</h2>
+    <p class="ajeitar-texto">Aprendendo frações, porcentagens, equações simples e problemas aplicados.</p>
+    <ul class="ajeitar-texto">
+      <li>Frações e decimais</li>
+      <li>Porcentagens e proporções</li>
+      <li>Equações do 1º grau</li>
+    </ul>
+    <!-- Aqui você pode adicionar quizzes do intermediário com o mesmo padrão -->
+  </div>
 
-      // Fade-out ao clicar em qualquer link
-      const links = document.querySelectorAll("a");
-      links.forEach((link) => {
-        link.addEventListener("click", function (e) {
-          const href = this.getAttribute("href");
-          if (!href || href.startsWith("#")) return;
+  <div id="avancado" class="tab-content">
+    <h2 class="ajeitar-texto">Avançado</h2>
+    <p class="ajeitar-texto">Conceitos avançados, resolução de problemas complexos e preparação para desafios.</p>
+    <ul class="ajeitar-texto">
+      <li>Equações do 2º grau</li>
+      <li>Funções e gráficos</li>
+      <li>Problemas desafiadores</li>
+    </ul>
+  </div>
 
-          e.preventDefault();
-          document.body.classList.remove("loaded"); // inicia fade-out
-          setTimeout(() => {
-            window.location.href = href;
-          }, 600);
-        });
-      });
+  <script>
+    // Fade-in ao carregar a página
+    window.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add("loaded");
+      initTabs();
+      initBasicQuiz();
+    });
 
-      // Controle das abas
+    // Inicializa abas
+    function initTabs() {
       const tabs = document.querySelectorAll(".tab");
       const contents = document.querySelectorAll(".tab-content");
-
       tabs.forEach((tab) => {
         tab.addEventListener("click", () => {
           tabs.forEach((t) => t.classList.remove("active"));
           contents.forEach((c) => c.classList.remove("active"));
-
           tab.classList.add("active");
-          document.getElementById(tab.dataset.tab).classList.add("active");
+          const target = tab.dataset.tab;
+          document.getElementById(target).classList.add("active");
         });
       });
-    </script>
-  </body>
+    }
+
+    // Inicializa o quiz básico
+    function initBasicQuiz() {
+      const order = [
+        'quiz-container-basico-1',
+        'quiz-container-basico-2',
+        'quiz-container-basico-3'
+      ];
+
+      const correct = {
+        'quiz-container-basico-1': 13,
+        'quiz-container-basico-2': 7,
+        'quiz-container-basico-3': 10
+      };
+
+      order.forEach((id, idx) => {
+        const block = document.getElementById(id);
+        if (!block) return;
+
+        const answersContainer = block.querySelector('.answers');
+        const answerButtons = answersContainer ? answersContainer.querySelectorAll('.answer') : [];
+
+        // liga handlers das respostas (remove handler anterior se existir)
+        answerButtons.forEach(btn => {
+          if (btn._handler) btn.removeEventListener('click', btn._handler);
+          const handler = () => handleAnswer(id, Number(btn.dataset.value), correct[id]);
+          btn._handler = handler;
+          btn.addEventListener('click', handler);
+          btn.disabled = false;
+        });
+
+        // liga botão next
+        const nextBtn = block.querySelector('.next');
+        if (nextBtn) {
+          if (nextBtn._handler) nextBtn.removeEventListener('click', nextBtn._handler);
+          const nHandler = () => handleNext(id, order);
+          nextBtn._handler = nHandler;
+          nextBtn.addEventListener('click', nHandler);
+        }
+
+        // estado inicial visual
+        if (idx === 0) {
+          block.style.display = 'block';
+          if (answersContainer) answersContainer.style.display = 'block';
+          const fb = block.querySelector('.feedback'); if (fb) fb.style.display = 'none';
+        } else {
+          block.style.display = 'none';
+        }
+      });
+    }
+
+    // Tratamento de resposta
+    function handleAnswer(blockId, value, correctValue) {
+      const block = document.getElementById(blockId);
+      if (!block) return;
+
+      const answersContainer = block.querySelector('.answers');
+      const feedback = block.querySelector('.feedback');
+      const feedbackText = block.querySelector('.feedback-text') || block.querySelector('[id^="feedback-text-"]');
+
+      if (!answersContainer || !feedback || !feedbackText) {
+        console.warn('Estrutura do bloco de quiz incompleta:', blockId);
+        return;
+      }
+
+      // desabilita botões para evitar múltiplos cliques
+      answersContainer.querySelectorAll('.answer').forEach(b => b.disabled = true);
+
+      if (value === correctValue) {
+        feedbackText.textContent = 'Resposta correta!';
+      } else {
+        feedbackText.textContent = 'Resposta errada! A resposta correta é ' + correctValue + '.';
+      }
+
+      // mostra feedback e esconde alternativas (sem remover o bloco)
+      answersContainer.style.display = 'none';
+      feedback.style.display = 'block';
+    }
+
+    // Próxima pergunta: oculta o atual e abre o próximo (ou mostra mensagem final)
+    function handleNext(currentId, order) {
+      const idx = order.indexOf(currentId);
+      const currentBlock = document.getElementById(currentId);
+      if (currentBlock) {
+        // limpa/oculta estado do bloco atual
+        const fbCurr = currentBlock.querySelector('.feedback');
+        if (fbCurr) fbCurr.style.display = 'none';
+        const answersCurr = currentBlock.querySelector('.answers');
+        if (answersCurr) {
+          answersCurr.style.display = 'none';
+          answersCurr.querySelectorAll('.answer').forEach(b => b.disabled = false);
+        }
+        currentBlock.style.display = 'none';
+      }
+
+      // mostra próximo bloco se existir
+      if (idx >= 0 && idx + 1 < order.length) {
+        const nextId = order[idx + 1];
+        const nextBlock = document.getElementById(nextId);
+        if (nextBlock) {
+          const answersNext = nextBlock.querySelector('.answers');
+          const fbNext = nextBlock.querySelector('.feedback');
+          nextBlock.style.display = 'block';
+          if (answersNext) {
+            answersNext.style.display = 'block';
+            answersNext.querySelectorAll('.answer').forEach(b => b.disabled = false);
+          }
+          if (fbNext) fbNext.style.display = 'none';
+        }
+      } else {
+        // terminou
+        const finished = document.getElementById('basico-finished');
+        if (finished) finished.style.display = 'block';
+      }
+    }
+  </script>
+</body>
+
 </html>
