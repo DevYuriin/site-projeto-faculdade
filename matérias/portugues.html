@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Português</title>
+  </head>
+  <body class="page-portugues">
+    <header class="site-header subject-header">
+      <div class="topbar">
+        <a class="brand" href="../index.html">
+          <span>StudyQuest</span>
+        </a>
+
+        <nav class="container" aria-label="Menu principal">
+          <div class="topico">
+            <ul>
+              <li><a href="../index.html">Início</a></li>
+            </ul>
+          </div>
+          <div class="topico">
+            <ul>
+              <li><a href="../disciplinas.html">Disciplinas</a></li>
+            </ul>
+          </div>
+          <div class="topico">
+            <ul>
+              <li><a href="../duvidas.html">Dúvidas</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <section class="page-hero">
+        <span class="subject-badge">Pt</span>
+        <div>
+          <span class="eyebrow">Linguagens</span>
+          <h1>Português</h1>
+          <p>Gramática, interpretação, escrita e exercícios para fixar conceitos essenciais.</p>
+        </div>
+      </section>
+    </header>
+
+    <main class="lesson-shell">
+    <!-- Abas -->
+    <div class="tabs">
+      <div class="tab active" data-tab="basico">Básico</div>
+      <div class="tab" data-tab="intermediario">Intermediário</div>
+      <div class="tab" data-tab="avancado">Avançado</div>
+    </div>
+
+    <section class="gamification-panel" data-quiz-id="portugues-basico" data-total-questions="3">
+      <div class="game-card">
+        <span class="game-label">Progresso do quiz básico</span>
+        <strong class="game-value" data-progress>0/3</strong>
+        <span class="progress-track"><span class="progress-fill"></span></span>
+      </div>
+      <div class="game-card">
+        <span class="game-label">XP total</span>
+        <strong class="game-value"><span data-xp>0</span> XP</strong>
+      </div>
+      <div class="badge-status" data-badge>Conquista bloqueada: conclua o quiz básico</div>
+    </section>
+
+    <!-- Conteúdos -->
+    <div id="basico" class="tab-content active">
+      <h2 class="ajeitar-texto">Básico</h2>
+      <p class="ajeitar-texto">
+        Fundamentos da língua portuguesa, gramática inicial e vocabulário
+        básico.
+      </p>
+      <div class="topic-grid">
+        <article class="topic-card">
+          <h3>Alfabeto e fonética</h3>
+          <p>Entenda as letras, os sons da fala, vogais, consoantes e sílabas.</p>
+          <div class="topic-actions">
+            <a class="topic-button study" href="conteudo.html?materia=portugues&topico=alfabeto">Estudar</a>
+            <a class="topic-button exercise" href="exercicios.html?materia=portugues&nivel=basico">Fazer exercícios</a>
+          </div>
+        </article>
+        <article class="topic-card">
+          <h3>Palavras e frases simples</h3>
+          <p>Veja como as palavras se combinam para formar frases com sentido.</p>
+          <div class="topic-actions">
+            <a class="topic-button study" href="conteudo.html?materia=portugues&topico=frases">Estudar</a>
+            <a class="topic-button exercise" href="exercicios.html?materia=portugues&nivel=basico">Fazer exercícios</a>
+          </div>
+        </article>
+        <article class="topic-card">
+          <h3>Ortografia e acentuação</h3>
+          <p>Aprenda regras iniciais de escrita correta e uso de acentos.</p>
+          <div class="topic-actions">
+            <a class="topic-button study" href="conteudo.html?materia=portugues&topico=ortografia">Estudar</a>
+            <a class="topic-button exercise" href="exercicios.html?materia=portugues&nivel=basico">Fazer exercícios</a>
+          </div>
+        </article>
+      </div>
+
+      <section id="portugues-alfabeto" class="lesson-detail">
+        <h3>Alfabeto e fonética</h3>
+        <p>O alfabeto reúne as letras usadas na escrita. A fonética observa os sons dessas letras na fala, ajudando a perceber sílabas, pronúncia e diferenças entre som e escrita.</p>
+      </section>
+      <section id="portugues-frases" class="lesson-detail">
+        <h3>Palavras e frases simples</h3>
+        <p>Uma frase é um conjunto de palavras com sentido completo. No início dos estudos, o foco é reconhecer sujeito, ação e ideia principal.</p>
+      </section>
+      <section id="portugues-ortografia" class="lesson-detail">
+        <h3>Ortografia e acentuação</h3>
+        <p>Ortografia é a escrita correta das palavras. A acentuação indica a sílaba mais forte e diferencia palavras, como avó e avô.</p>
+      </section>
+
+      <div id="portugues-exercicios" class="quiz-container" data-quiz-id="portugues-basico">
+        <div class="quiz-block" data-correct="Oxítona">
+          <h3 class="quiz-title">Exercício 1: Classificação de palavras</h3>
+          <div class="question-area">
+            <p>A palavra "café" é classificada como:</p>
+            <div class="answers">
+              <button class="answer" data-value="Oxítona">Oxítona</button>
+              <button class="answer" data-value="Paroxítona">Paroxítona</button>
+              <button class="answer" data-value="Proparoxítona">Proparoxítona</button>
+              <button class="answer" data-value="Monossílaba átona">Monossílaba átona</button>
+            </div>
+          </div>
+          <div class="feedback">
+            <p class="feedback-text"></p>
+            <button class="next">Próxima Pergunta</button>
+          </div>
+        </div>
+
+        <div class="quiz-block" data-correct="Substantivo">
+          <h3 class="quiz-title">Exercício 2: Classes gramaticais</h3>
+          <div class="question-area">
+            <p>Na frase "O aluno estudou", a palavra "aluno" é um:</p>
+            <div class="answers">
+              <button class="answer" data-value="Verbo">Verbo</button>
+              <button class="answer" data-value="Adjetivo">Adjetivo</button>
+              <button class="answer" data-value="Substantivo">Substantivo</button>
+              <button class="answer" data-value="Advérbio">Advérbio</button>
+            </div>
+          </div>
+          <div class="feedback">
+            <p class="feedback-text"></p>
+            <button class="next">Próxima Pergunta</button>
+          </div>
+        </div>
+
+        <div class="quiz-block" data-correct="Acentuação">
+          <h3 class="quiz-title">Exercício 3: Ortografia</h3>
+          <div class="question-area">
+            <p>O uso correto do acento nas palavras faz parte principalmente da:</p>
+            <div class="answers">
+              <button class="answer" data-value="Pontuação">Pontuação</button>
+              <button class="answer" data-value="Acentuação">Acentuação</button>
+              <button class="answer" data-value="Concordância">Concordância</button>
+              <button class="answer" data-value="Coesão">Coesão</button>
+            </div>
+          </div>
+          <div class="feedback">
+            <p class="feedback-text"></p>
+            <button class="next">Próxima Pergunta</button>
+          </div>
+        </div>
+
+        <div class="quiz-finished">
+          <strong>Parabéns, você completou o exercício básico de Português!</strong>
+        </div>
+      </div>
+    </div>
+
+    <div id="intermediario" class="tab-content">
+      <h2 class="ajeitar-texto">Intermediário</h2>
+      <p class="ajeitar-texto">
+        Gramática intermediária, interpretação de textos e redação básica.
+      </p>
+      <div class="topic-grid">
+        <article class="topic-card">
+          <h3>Classes de palavras</h3>
+          <p>Identifique substantivos, verbos, adjetivos e a função de cada termo.</p>
+          <div class="topic-actions"><a class="topic-button study" href="conteudo.html?materia=portugues&topico=classes">Estudar</a><a class="topic-button exercise" href="exercicios.html?materia=portugues&nivel=intermediario">Fazer exercícios</a></div>
+        </article>
+        <article class="topic-card">
+          <h3>Concordância</h3>
+          <p>Aprenda como palavras combinam em número, pessoa e gênero.</p>
+          <div class="topic-actions"><a class="topic-button study" href="conteudo.html?materia=portugues&topico=concordancia">Estudar</a><a class="topic-button exercise" href="exercicios.html?materia=portugues&nivel=intermediario">Fazer exercícios</a></div>
+        </article>
+        <article class="topic-card">
+          <h3>Interpretação de textos</h3>
+          <p>Treine a identificação de tema, informações explícitas e ideias implícitas.</p>
+          <div class="topic-actions"><a class="topic-button study" href="conteudo.html?materia=portugues&topico=interpretacao">Estudar</a><a class="topic-button exercise" href="exercicios.html?materia=portugues&nivel=intermediario">Fazer exercícios</a></div>
+        </article>
+      </div>
+      <section id="portugues-classes" class="lesson-detail"><h3>Classes de palavras</h3><p>As classes ajudam a entender o papel de cada palavra na frase: substantivos nomeiam, verbos indicam ações e adjetivos caracterizam.</p></section>
+      <section id="portugues-concordancia" class="lesson-detail"><h3>Concordância</h3><p>A concordância mantém harmonia entre as palavras, como em "os alunos estudiosos" e "a aluna estudiosa".</p></section>
+      <section id="portugues-interpretacao" class="lesson-detail"><h3>Interpretação de textos</h3><p>Interpretar é compreender o que o texto diz, como diz e que ideia principal pretende transmitir.</p></section>
+    </div>
+
+    <div id="avancado" class="tab-content">
+      <h2 class="ajeitar-texto">Avançado</h2>
+      <p class="ajeitar-texto">
+        Redação avançada, literatura e análise crítica de textos.
+      </p>
+      <div class="topic-grid">
+        <article class="topic-card"><h3>Redação dissertativa</h3><p>Organize tese, argumentos e conclusão para defender uma ideia.</p><div class="topic-actions"><a class="topic-button study" href="conteudo.html?materia=portugues&topico=redacao">Estudar</a><a class="topic-button exercise" href="exercicios.html?materia=portugues&nivel=avancado">Fazer exercícios</a></div></article>
+        <article class="topic-card"><h3>Figuras de linguagem</h3><p>Reconheça metáfora, comparação, ironia e outros recursos expressivos.</p><div class="topic-actions"><a class="topic-button study" href="conteudo.html?materia=portugues&topico=figuras">Estudar</a><a class="topic-button exercise" href="exercicios.html?materia=portugues&nivel=avancado">Fazer exercícios</a></div></article>
+        <article class="topic-card"><h3>Literatura</h3><p>Observe contexto histórico, estilo e temas de obras literárias.</p><div class="topic-actions"><a class="topic-button study" href="conteudo.html?materia=portugues&topico=literatura">Estudar</a><a class="topic-button exercise" href="exercicios.html?materia=portugues&nivel=avancado">Fazer exercícios</a></div></article>
+      </div>
+      <section id="portugues-redacao" class="lesson-detail"><h3>Redação dissertativa</h3><p>Esse tipo de texto apresenta uma opinião central e usa argumentos para convencer o leitor.</p></section>
+      <section id="portugues-figuras" class="lesson-detail"><h3>Figuras de linguagem</h3><p>São recursos que tornam a linguagem mais expressiva, dando novos sentidos às palavras.</p></section>
+      <section id="portugues-literatura" class="lesson-detail"><h3>Literatura</h3><p>A literatura permite estudar textos artísticos, movimentos culturais e formas de expressão de uma época.</p></section>
+    </div>
+    </main>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

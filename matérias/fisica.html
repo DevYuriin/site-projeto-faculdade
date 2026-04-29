@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Física</title>
+  </head>
+  <body class="page-fisica">
+    <header class="site-header subject-header">
+      <div class="topbar">
+        <a class="brand" href="../index.html">
+          <span>StudyQuest</span>
+        </a>
+
+        <nav class="container" aria-label="Menu principal">
+          <div class="topico">
+            <ul>
+              <li><a href="../index.html">Início</a></li>
+            </ul>
+          </div>
+          <div class="topico">
+            <ul>
+              <li><a href="../disciplinas.html">Disciplinas</a></li>
+            </ul>
+          </div>
+          <div class="topico">
+            <ul>
+              <li><a href="../duvidas.html">Dúvidas</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <section class="page-hero">
+        <span class="subject-badge">Fx</span>
+        <div>
+          <span class="eyebrow">Ciências da natureza</span>
+          <h1>Física</h1>
+          <p>Movimento, forças, energia e unidades com revisão por níveis e prática guiada.</p>
+        </div>
+      </section>
+    </header>
+
+    <main class="lesson-shell">
+    <!-- Abas -->
+    <div class="tabs">
+      <div class="tab active" data-tab="basico">Básico</div>
+      <div class="tab" data-tab="intermediario">Intermediário</div>
+      <div class="tab" data-tab="avancado">Avançado</div>
+    </div>
+
+    <section class="gamification-panel" data-quiz-id="fisica-basico" data-total-questions="3">
+      <div class="game-card"><span class="game-label">Progresso do quiz básico</span><strong class="game-value" data-progress>0/3</strong><span class="progress-track"><span class="progress-fill"></span></span></div>
+      <div class="game-card"><span class="game-label">XP total</span><strong class="game-value"><span data-xp>0</span> XP</strong></div>
+      <div class="badge-status" data-badge>Conquista bloqueada: conclua o quiz básico</div>
+    </section>
+
+    <!-- Conteúdos -->
+    <div id="basico" class="tab-content active">
+      <h2 class="ajeitar-texto">Básico</h2>
+      <p class="ajeitar-texto">
+        Introdução à Física: conceitos fundamentais e noções iniciais de
+        movimento e forças.
+      </p>
+      <div class="topic-grid">
+        <article class="topic-card"><h3>Movimento</h3><p>Estude posição, deslocamento, velocidade e aceleração.</p><div class="topic-actions"><a class="topic-button study" href="conteudo.html?materia=fisica&topico=movimento">Estudar</a><a class="topic-button exercise" href="exercicios.html?materia=fisica&nivel=basico">Fazer exercícios</a></div></article>
+        <article class="topic-card"><h3>Leis de Newton</h3><p>Entenda a relação entre força, massa e movimento.</p><div class="topic-actions"><a class="topic-button study" href="conteudo.html?materia=fisica&topico=newton">Estudar</a><a class="topic-button exercise" href="exercicios.html?materia=fisica&nivel=basico">Fazer exercícios</a></div></article>
+        <article class="topic-card"><h3>Grandezas e unidades</h3><p>Reconheça medidas como metro, segundo, quilograma e newton.</p><div class="topic-actions"><a class="topic-button study" href="conteudo.html?materia=fisica&topico=grandezas">Estudar</a><a class="topic-button exercise" href="exercicios.html?materia=fisica&nivel=basico">Fazer exercícios</a></div></article>
+      </div>
+      <section id="fisica-movimento" class="lesson-detail"><h3>Movimento</h3><p>O movimento descreve como a posição de um corpo muda ao longo do tempo. Velocidade e aceleração ajudam a analisar essa mudança.</p></section>
+      <section id="fisica-newton" class="lesson-detail"><h3>Leis de Newton</h3><p>As Leis de Newton explicam por que objetos permanecem em repouso, se movem ou mudam seu movimento quando forças atuam.</p></section>
+      <section id="fisica-grandezas" class="lesson-detail"><h3>Grandezas e unidades</h3><p>Grandezas físicas são propriedades que podem ser medidas. As unidades padronizam essas medidas para todos entenderem o resultado.</p></section>
+
+      <div id="fisica-exercicios" class="quiz-container" data-quiz-id="fisica-basico">
+        <div class="quiz-block" data-correct="Velocidade">
+          <h3 class="quiz-title">Exercício 1: Grandezas físicas</h3>
+          <div class="question-area">
+            <p>Qual grandeza relaciona distância percorrida e tempo gasto?</p>
+            <div class="answers">
+              <button class="answer" data-value="Massa">Massa</button>
+              <button class="answer" data-value="Velocidade">Velocidade</button>
+              <button class="answer" data-value="Temperatura">Temperatura</button>
+              <button class="answer" data-value="Volume">Volume</button>
+            </div>
+          </div>
+          <div class="feedback">
+            <p class="feedback-text"></p>
+            <button class="next">Próxima Pergunta</button>
+          </div>
+        </div>
+
+        <div class="quiz-block" data-correct="Força">
+          <h3 class="quiz-title">Exercício 2: Leis de Newton</h3>
+          <div class="question-area">
+            <p>Na Física, a interação capaz de alterar o movimento de um corpo é chamada de:</p>
+            <div class="answers">
+              <button class="answer" data-value="Força">Força</button>
+              <button class="answer" data-value="Calor">Calor</button>
+              <button class="answer" data-value="Densidade">Densidade</button>
+              <button class="answer" data-value="Pressão atmosférica">Pressão atmosférica</button>
+            </div>
+          </div>
+          <div class="feedback">
+            <p class="feedback-text"></p>
+            <button class="next">Próxima Pergunta</button>
+          </div>
+        </div>
+
+        <div class="quiz-block" data-correct="Metro">
+          <h3 class="quiz-title">Exercício 3: Unidades de medida</h3>
+          <div class="question-area">
+            <p>Qual é a unidade básica de comprimento no Sistema Internacional?</p>
+            <div class="answers">
+              <button class="answer" data-value="Quilograma">Quilograma</button>
+              <button class="answer" data-value="Segundo">Segundo</button>
+              <button class="answer" data-value="Metro">Metro</button>
+              <button class="answer" data-value="Newton">Newton</button>
+            </div>
+          </div>
+          <div class="feedback">
+            <p class="feedback-text"></p>
+            <button class="next">Próxima Pergunta</button>
+          </div>
+        </div>
+
+        <div class="quiz-finished">
+          <strong>Parabéns, você completou o exercício básico de Física!</strong>
+        </div>
+      </div>
+    </div>
+
+    <div id="intermediario" class="tab-content">
+      <h2 class="ajeitar-texto">Intermediário</h2>
+      <p class="ajeitar-texto">
+        Estudo de energia, trabalho, leis de conservação e problemas aplicados.
+      </p>
+      <div class="topic-grid">
+        <article class="topic-card"><h3>Energia</h3><p>Diferencie energia cinética, potencial e transformações.</p><div class="topic-actions"><a class="topic-button study" href="conteudo.html?materia=fisica&topico=energia">Estudar</a><a class="topic-button exercise" href="exercicios.html?materia=fisica&nivel=intermediario">Fazer exercícios</a></div></article>
+        <article class="topic-card"><h3>Trabalho e potência</h3><p>Relacione força, deslocamento e rapidez na realização de trabalho.</p><div class="topic-actions"><a class="topic-button study" href="conteudo.html?materia=fisica&topico=trabalho">Estudar</a><a class="topic-button exercise" href="exercicios.html?materia=fisica&nivel=intermediario">Fazer exercícios</a></div></article>
+        <article class="topic-card"><h3>Conservação</h3><p>Entenda sistemas em que energia e quantidade de movimento se mantêm.</p><div class="topic-actions"><a class="topic-button study" href="conteudo.html?materia=fisica&topico=conservacao">Estudar</a><a class="topic-button exercise" href="exercicios.html?materia=fisica&nivel=intermediario">Fazer exercícios</a></div></article>
+      </div>
+      <section id="fisica-energia" class="lesson-detail"><h3>Energia</h3><p>Energia cinética está ligada ao movimento. Energia potencial depende da posição ou configuração de um corpo.</p></section>
+      <section id="fisica-trabalho" class="lesson-detail"><h3>Trabalho e potência</h3><p>Trabalho ocorre quando uma força provoca deslocamento. Potência mede a rapidez com que esse trabalho é realizado.</p></section>
+      <section id="fisica-conservacao" class="lesson-detail"><h3>Conservação</h3><p>Em muitos sistemas, a energia total se transforma, mas não desaparece.</p></section>
+    </div>
+
+    <div id="avancado" class="tab-content">
+      <h2 class="ajeitar-texto">Avançado</h2>
+      <p class="ajeitar-texto">
+        Conceitos avançados de Física, incluindo eletromagnetismo e óptica.
+      </p>
+      <div class="topic-grid">
+        <article class="topic-card"><h3>Eletromagnetismo</h3><p>Estude campos elétricos, magnéticos e interações entre cargas.</p><div class="topic-actions"><a class="topic-button study" href="conteudo.html?materia=fisica&topico=eletro">Estudar</a><a class="topic-button exercise" href="exercicios.html?materia=fisica&nivel=avancado">Fazer exercícios</a></div></article>
+        <article class="topic-card"><h3>Leis de Maxwell</h3><p>Conheça ideias que conectam eletricidade, magnetismo e ondas.</p><div class="topic-actions"><a class="topic-button study" href="conteudo.html?materia=fisica&topico=maxwell">Estudar</a><a class="topic-button exercise" href="exercicios.html?materia=fisica&nivel=avancado">Fazer exercícios</a></div></article>
+        <article class="topic-card"><h3>Óptica</h3><p>Analise luz, reflexão, refração e formação de imagens.</p><div class="topic-actions"><a class="topic-button study" href="conteudo.html?materia=fisica&topico=optica">Estudar</a><a class="topic-button exercise" href="exercicios.html?materia=fisica&nivel=avancado">Fazer exercícios</a></div></article>
+      </div>
+      <section id="fisica-eletro" class="lesson-detail"><h3>Eletromagnetismo</h3><p>O eletromagnetismo explica fenômenos ligados a cargas elétricas, correntes e campos magnéticos.</p></section>
+      <section id="fisica-maxwell" class="lesson-detail"><h3>Leis de Maxwell</h3><p>As equações de Maxwell resumem relações entre campos elétricos e magnéticos.</p></section>
+      <section id="fisica-optica" class="lesson-detail"><h3>Óptica</h3><p>A óptica estuda o comportamento da luz em espelhos, lentes e diferentes meios.</p></section>
+    </div>
+    </main>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

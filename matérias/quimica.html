@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Química</title>
+  </head>
+  <body class="page-quimica">
+    <header class="site-header subject-header">
+      <div class="topbar">
+        <a class="brand" href="../index.html">
+          <span>StudyQuest</span>
+        </a>
+
+        <nav class="container" aria-label="Menu principal">
+          <div class="topico">
+            <ul>
+              <li><a href="../index.html">Início</a></li>
+            </ul>
+          </div>
+          <div class="topico">
+            <ul>
+              <li><a href="../disciplinas.html">Disciplinas</a></li>
+            </ul>
+          </div>
+          <div class="topico">
+            <ul>
+              <li><a href="../duvidas.html">Dúvidas</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <section class="page-hero">
+        <span class="subject-badge">Qm</span>
+        <div>
+          <span class="eyebrow">Ciências da natureza</span>
+          <h1>Química</h1>
+          <p>Matéria, átomos, tabela periódica e reações químicas em uma trilha direta.</p>
+        </div>
+      </section>
+    </header>
+
+    <main class="lesson-shell">
+    <!-- Abas -->
+    <div class="tabs">
+      <div class="tab active" data-tab="basico">Básico</div>
+      <div class="tab" data-tab="intermediario">Intermediário</div>
+      <div class="tab" data-tab="avancado">Avançado</div>
+    </div>
+
+    <section class="gamification-panel" data-quiz-id="quimica-basico" data-total-questions="3">
+      <div class="game-card"><span class="game-label">Progresso do quiz básico</span><strong class="game-value" data-progress>0/3</strong><span class="progress-track"><span class="progress-fill"></span></span></div>
+      <div class="game-card"><span class="game-label">XP total</span><strong class="game-value"><span data-xp>0</span> XP</strong></div>
+      <div class="badge-status" data-badge>Conquista bloqueada: conclua o quiz básico</div>
+    </section>
+
+    <!-- Conteúdos -->
+    <div id="basico" class="tab-content active">
+      <h2 class="ajeitar-texto">Básico</h2>
+      <p class="ajeitar-texto">
+        Introdução à Química: conceitos fundamentais e noções iniciais sobre
+        matéria e substâncias.
+      </p>
+      <div class="topic-grid">
+        <article class="topic-card"><h3>Átomos e moléculas</h3><p>Conheça as partículas que formam a matéria e como elas se agrupam.</p><div class="topic-actions"><a class="topic-button study" href="conteudo.html?materia=quimica&topico=atomos">Estudar</a><a class="topic-button exercise" href="exercicios.html?materia=quimica&nivel=basico">Fazer exercícios</a></div></article>
+        <article class="topic-card"><h3>Estados físicos</h3><p>Entenda sólido, líquido e gasoso a partir da organização das partículas.</p><div class="topic-actions"><a class="topic-button study" href="conteudo.html?materia=quimica&topico=estados">Estudar</a><a class="topic-button exercise" href="exercicios.html?materia=quimica&nivel=basico">Fazer exercícios</a></div></article>
+        <article class="topic-card"><h3>Tabela periódica</h3><p>Veja como os elementos químicos são organizados por propriedades.</p><div class="topic-actions"><a class="topic-button study" href="conteudo.html?materia=quimica&topico=tabela">Estudar</a><a class="topic-button exercise" href="exercicios.html?materia=quimica&nivel=basico">Fazer exercícios</a></div></article>
+      </div>
+      <section id="quimica-atomos" class="lesson-detail"><h3>Átomos e moléculas</h3><p>Átomos são unidades básicas dos elementos. Moléculas surgem quando átomos se ligam, formando substâncias como a água.</p></section>
+      <section id="quimica-estados" class="lesson-detail"><h3>Estados físicos</h3><p>No sólido, as partículas ficam mais organizadas; no líquido, fluem; no gasoso, ficam mais afastadas e livres.</p></section>
+      <section id="quimica-tabela" class="lesson-detail"><h3>Tabela periódica</h3><p>A tabela periódica organiza os elementos por número atômico e ajuda a prever propriedades químicas.</p></section>
+
+      <div id="quimica-exercicios" class="quiz-container" data-quiz-id="quimica-basico">
+        <div class="quiz-block" data-correct="Átomo">
+          <h3 class="quiz-title">Exercício 1: Estrutura da matéria</h3>
+          <div class="question-area">
+            <p>Qual é a menor unidade básica de um elemento químico?</p>
+            <div class="answers">
+              <button class="answer" data-value="Molécula">Molécula</button>
+              <button class="answer" data-value="Átomo">Átomo</button>
+              <button class="answer" data-value="Mistura">Mistura</button>
+              <button class="answer" data-value="Solução">Solução</button>
+            </div>
+          </div>
+          <div class="feedback">
+            <p class="feedback-text"></p>
+            <button class="next">Próxima Pergunta</button>
+          </div>
+        </div>
+
+        <div class="quiz-block" data-correct="Líquido">
+          <h3 class="quiz-title">Exercício 2: Estados físicos</h3>
+          <div class="question-area">
+            <p>Qual estado físico tem volume definido, mas forma variável?</p>
+            <div class="answers">
+              <button class="answer" data-value="Sólido">Sólido</button>
+              <button class="answer" data-value="Líquido">Líquido</button>
+              <button class="answer" data-value="Gasoso">Gasoso</button>
+              <button class="answer" data-value="Plasma">Plasma</button>
+            </div>
+          </div>
+          <div class="feedback">
+            <p class="feedback-text"></p>
+            <button class="next">Próxima Pergunta</button>
+          </div>
+        </div>
+
+        <div class="quiz-block" data-correct="Tabela periódica">
+          <h3 class="quiz-title">Exercício 3: Elementos químicos</h3>
+          <div class="question-area">
+            <p>Onde os elementos químicos são organizados?</p>
+            <div class="answers">
+              <button class="answer" data-value="Mapa molecular">Mapa molecular</button>
+              <button class="answer" data-value="Tabela periódica">Tabela periódica</button>
+              <button class="answer" data-value="Escala Celsius">Escala Celsius</button>
+              <button class="answer" data-value="Plano cartesiano">Plano cartesiano</button>
+            </div>
+          </div>
+          <div class="feedback">
+            <p class="feedback-text"></p>
+            <button class="next">Próxima Pergunta</button>
+          </div>
+        </div>
+
+        <div class="quiz-finished">
+          <strong>Parabéns, você completou o exercício básico de Química!</strong>
+        </div>
+      </div>
+    </div>
+
+    <div id="intermediario" class="tab-content">
+      <h2 class="ajeitar-texto">Intermediário</h2>
+      <p class="ajeitar-texto">
+        Aprendendo reações químicas, ligações e equações químicas simples.
+      </p>
+      <div class="topic-grid">
+        <article class="topic-card"><h3>Ligações químicas</h3><p>Entenda como átomos se unem para formar substâncias.</p><div class="topic-actions"><a class="topic-button study" href="conteudo.html?materia=quimica&topico=ligacoes">Estudar</a><a class="topic-button exercise" href="exercicios.html?materia=quimica&nivel=intermediario">Fazer exercícios</a></div></article>
+        <article class="topic-card"><h3>Balanceamento</h3><p>Aprenda a manter a mesma quantidade de átomos nos dois lados da equação.</p><div class="topic-actions"><a class="topic-button study" href="conteudo.html?materia=quimica&topico=balanceamento">Estudar</a><a class="topic-button exercise" href="exercicios.html?materia=quimica&nivel=intermediario">Fazer exercícios</a></div></article>
+        <article class="topic-card"><h3>Ácido-base</h3><p>Reconheça reações entre ácidos e bases e seus produtos comuns.</p><div class="topic-actions"><a class="topic-button study" href="conteudo.html?materia=quimica&topico=acido_base">Estudar</a><a class="topic-button exercise" href="exercicios.html?materia=quimica&nivel=intermediario">Fazer exercícios</a></div></article>
+      </div>
+      <section id="quimica-ligacoes" class="lesson-detail"><h3>Ligações químicas</h3><p>Ligações iônicas, covalentes e metálicas explicam como átomos se unem e formam substâncias.</p></section>
+      <section id="quimica-balanceamento" class="lesson-detail"><h3>Balanceamento</h3><p>Balancear uma equação garante que a massa seja conservada antes e depois da reação.</p></section>
+      <section id="quimica-acido-base" class="lesson-detail"><h3>Ácido-base</h3><p>Reações ácido-base geralmente formam sal e água, dependendo das substâncias envolvidas.</p></section>
+    </div>
+
+    <div id="avancado" class="tab-content">
+      <h2 class="ajeitar-texto">Avançado</h2>
+      <p class="ajeitar-texto">
+        Conceitos avançados de química, estequiometria e estudos aplicados.
+      </p>
+      <div class="topic-grid">
+        <article class="topic-card"><h3>Estequiometria</h3><p>Relacione quantidades de reagentes e produtos em uma reação.</p><div class="topic-actions"><a class="topic-button study" href="conteudo.html?materia=quimica&topico=estequiometria">Estudar</a><a class="topic-button exercise" href="exercicios.html?materia=quimica&nivel=avancado">Fazer exercícios</a></div></article>
+        <article class="topic-card"><h3>Cinética química</h3><p>Estude os fatores que alteram a velocidade das reações.</p><div class="topic-actions"><a class="topic-button study" href="conteudo.html?materia=quimica&topico=cinetica">Estudar</a><a class="topic-button exercise" href="exercicios.html?materia=quimica&nivel=avancado">Fazer exercícios</a></div></article>
+        <article class="topic-card"><h3>Química orgânica</h3><p>Conheça compostos de carbono e hidrocarbonetos.</p><div class="topic-actions"><a class="topic-button study" href="conteudo.html?materia=quimica&topico=organica">Estudar</a><a class="topic-button exercise" href="exercicios.html?materia=quimica&nivel=avancado">Fazer exercícios</a></div></article>
+      </div>
+      <section id="quimica-estequiometria" class="lesson-detail"><h3>Estequiometria</h3><p>Usa proporções das equações químicas para calcular massas, mols e volumes envolvidos.</p></section>
+      <section id="quimica-cinetica" class="lesson-detail"><h3>Cinética química</h3><p>Temperatura, concentração e catalisadores podem acelerar ou desacelerar uma reação.</p></section>
+      <section id="quimica-organica" class="lesson-detail"><h3>Química orgânica</h3><p>Estuda compostos com carbono, muito presentes em combustíveis, alimentos, medicamentos e materiais.</p></section>
+    </div>
+    </main>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

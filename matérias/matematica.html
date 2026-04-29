@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../style.css" />
+  <title>Matemática</title>
+</head>
+
+<body class="page-matematica">
+  <header class="site-header subject-header">
+    <div class="topbar">
+      <a class="brand" href="../index.html">
+        <span>StudyQuest</span>
+      </a>
+
+      <nav class="container" aria-label="Menu principal">
+        <div class="topico">
+          <ul>
+            <li><a href="../index.html">Início</a></li>
+          </ul>
+        </div>
+        <div class="topico">
+          <ul>
+            <li><a href="../disciplinas.html">Disciplinas</a></li>
+          </ul>
+        </div>
+        <div class="topico">
+          <ul>
+            <li><a href="../duvidas.html">Dúvidas</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <section class="page-hero">
+      <span class="subject-badge">Σ</span>
+      <div>
+        <span class="eyebrow">Exatas</span>
+        <h1>Matemática</h1>
+        <p>Operações, frações, equações e desafios para desenvolver raciocínio lógico.</p>
+      </div>
+    </section>
+  </header>
+
+  <main class="lesson-shell">
+  <!-- Abas -->
+  <div class="tabs">
+    <div class="tab active" data-tab="basico">Básico</div>
+    <div class="tab" data-tab="intermediario">Intermediário</div>
+    <div class="tab" data-tab="avancado">Avançado</div>
+  </div>
+
+  <section class="gamification-panel" data-quiz-id="matematica-basico" data-total-questions="3">
+    <div class="game-card">
+      <span class="game-label">Progresso do quiz básico</span>
+      <strong class="game-value" data-progress>0/3</strong>
+      <span class="progress-track"><span class="progress-fill"></span></span>
+    </div>
+    <div class="game-card">
+      <span class="game-label">XP total</span>
+      <strong class="game-value"><span data-xp>0</span> XP</strong>
+    </div>
+    <div class="badge-status" data-badge>Conquista bloqueada: conclua o quiz básico</div>
+  </section>
+
+  <!-- Conteúdos -->
+  <div id="basico" class="tab-content active">
+    <h2 class="ajeitar-texto">Básico</h2>
+    <p class="ajeitar-texto">Introdução aos números, operações básicas e conceitos fundamentais de matemática.</p>
+    <div class="topic-grid">
+      <article class="topic-card"><h3>Adição e subtração</h3><p>Use operações para juntar, comparar e retirar quantidades.</p><div class="topic-actions"><a class="topic-button study" href="conteudo.html?materia=matematica&topico=adicao">Estudar</a><a class="topic-button exercise" href="exercicios.html?materia=matematica&nivel=basico">Fazer exercícios</a></div></article>
+      <article class="topic-card"><h3>Multiplicação e divisão</h3><p>Entenda grupos iguais, repartição e relações entre números.</p><div class="topic-actions"><a class="topic-button study" href="conteudo.html?materia=matematica&topico=multiplicacao">Estudar</a><a class="topic-button exercise" href="exercicios.html?materia=matematica&nivel=basico">Fazer exercícios</a></div></article>
+      <article class="topic-card"><h3>Problemas simples</h3><p>Transforme situações do dia a dia em contas e resoluções.</p><div class="topic-actions"><a class="topic-button study" href="conteudo.html?materia=matematica&topico=problemas">Estudar</a><a class="topic-button exercise" href="exercicios.html?materia=matematica&nivel=basico">Fazer exercícios</a></div></article>
+    </div>
+
+    <section id="matematica-adicao" class="lesson-detail"><h3>Adição e subtração</h3><p>A adição representa juntar quantidades. A subtração representa retirar ou comparar diferenças entre valores.</p></section>
+    <section id="matematica-multiplicacao" class="lesson-detail"><h3>Multiplicação e divisão</h3><p>A multiplicação simplifica somas repetidas. A divisão reparte uma quantidade em partes iguais ou descobre quantos grupos cabem nela.</p></section>
+    <section id="matematica-problemas" class="lesson-detail"><h3>Problemas simples</h3><p>Para resolver um problema, leia com atenção, destaque os números importantes e escolha a operação adequada.</p></section>
+
+    <!-- Quiz do Básico -->
+    <div id="matematica-exercicios" class="quiz-container" data-quiz-id="matematica-basico">
+
+      <!-- Questão 1 -->
+      <div class="quiz-block" data-correct="13">
+        <h3 class="quiz-title">Exercício 1: Qual é o resultado da operação?</h3>
+        <div class="question-area">
+          <p id="question-basico-1">Quanto é 8 + 5?</p>
+          <div class="answers">
+            <button class="answer" data-value="13">13</button>
+            <button class="answer" data-value="12">12</button>
+            <button class="answer" data-value="14">14</button>
+            <button class="answer" data-value="15">15</button>
+          </div>
+        </div>
+        <div id="feedback-basico-1" class="feedback" style="display: none;">
+          <!-- adicionei a classe feedback-text para o seletor do JS -->
+          <p id="feedback-text-basico-1" class="feedback-text"></p>
+          <button class="next">Próxima Pergunta</button>
+        </div>
+      </div>
+
+      <!-- Questão 2 -->
+      <div class="quiz-block" data-correct="7">
+        <h3 class="quiz-title">Exercício 2: Qual é o resultado da operação?</h3>
+        <div class="question-area">
+          <p id="question-basico-2">Quanto é 10 - 3?</p>
+          <div class="answers">
+            <button class="answer" data-value="7">7</button>
+            <button class="answer" data-value="6">6</button>
+            <button class="answer" data-value="8">8</button>
+            <button class="answer" data-value="5">5</button>
+          </div>
+        </div>
+        <div id="feedback-basico-2" class="feedback" style="display: none;">
+          <p id="feedback-text-basico-2" class="feedback-text"></p>
+          <button class="next">Próxima Pergunta</button>
+        </div>
+      </div>
+
+      <!-- Questão 3 -->
+      <div class="quiz-block" data-correct="10">
+        <h3 class="quiz-title">Exercício 3: Qual é o resultado da operação?</h3>
+        <div class="question-area">
+          <p id="question-basico-3">Quanto é 4 + 6?</p>
+          <div class="answers">
+            <button class="answer" data-value="10">10</button>
+            <button class="answer" data-value="9">9</button>
+            <button class="answer" data-value="11">11</button>
+            <button class="answer" data-value="8">8</button>
+          </div>
+        </div>
+        <div id="feedback-basico-3" class="feedback" style="display: none;">
+          <p id="feedback-text-basico-3" class="feedback-text"></p>
+          <button class="next">Próxima Pergunta</button>
+        </div>
+      </div>
+
+      <div class="quiz-finished">
+        <strong>Parabéns, você completou o exercício básico!</strong>
+      </div>
+
+    </div> <!-- fim quiz-container-basico -->
+
+  </div> <!-- fim basico -->
+
+  <div id="intermediario" class="tab-content">
+    <h2 class="ajeitar-texto">Intermediário</h2>
+    <p class="ajeitar-texto">Aprendendo frações, porcentagens, equações simples e problemas aplicados.</p>
+    <div class="topic-grid">
+      <article class="topic-card"><h3>Frações e decimais</h3><p>Compare partes de um inteiro e represente valores de formas diferentes.</p><div class="topic-actions"><a class="topic-button study" href="conteudo.html?materia=matematica&topico=fracoes">Estudar</a><a class="topic-button exercise" href="exercicios.html?materia=matematica&nivel=intermediario">Fazer exercícios</a></div></article>
+      <article class="topic-card"><h3>Porcentagens</h3><p>Calcule descontos, aumentos e proporções usando base 100.</p><div class="topic-actions"><a class="topic-button study" href="conteudo.html?materia=matematica&topico=porcentagem">Estudar</a><a class="topic-button exercise" href="exercicios.html?materia=matematica&nivel=intermediario">Fazer exercícios</a></div></article>
+      <article class="topic-card"><h3>Equações do 1º grau</h3><p>Descubra valores desconhecidos mantendo o equilíbrio da igualdade.</p><div class="topic-actions"><a class="topic-button study" href="conteudo.html?materia=matematica&topico=equacoes">Estudar</a><a class="topic-button exercise" href="exercicios.html?materia=matematica&nivel=intermediario">Fazer exercícios</a></div></article>
+    </div>
+    <section id="matematica-fracoes" class="lesson-detail"><h3>Frações e decimais</h3><p>Frações mostram partes de um todo. Decimais representam essas partes usando vírgula, como 0,5 para metade.</p></section>
+    <section id="matematica-porcentagem" class="lesson-detail"><h3>Porcentagens</h3><p>Porcentagem significa "por cem". Ela ajuda a comparar proporções, descontos e acréscimos.</p></section>
+    <section id="matematica-equacoes" class="lesson-detail"><h3>Equações do 1º grau</h3><p>Resolver uma equação é encontrar o valor que torna a igualdade verdadeira.</p></section>
+  </div>
+
+  <div id="avancado" class="tab-content">
+    <h2 class="ajeitar-texto">Avançado</h2>
+    <p class="ajeitar-texto">Conceitos avançados, resolução de problemas complexos e preparação para desafios.</p>
+    <div class="topic-grid">
+      <article class="topic-card"><h3>Equações do 2º grau</h3><p>Resolva expressões com termo ao quadrado e analise suas raízes.</p><div class="topic-actions"><a class="topic-button study" href="conteudo.html?materia=matematica&topico=segundo_grau">Estudar</a><a class="topic-button exercise" href="exercicios.html?materia=matematica&nivel=avancado">Fazer exercícios</a></div></article>
+      <article class="topic-card"><h3>Funções e gráficos</h3><p>Relacione grandezas e interprete informações no plano cartesiano.</p><div class="topic-actions"><a class="topic-button study" href="conteudo.html?materia=matematica&topico=funcoes">Estudar</a><a class="topic-button exercise" href="exercicios.html?materia=matematica&nivel=avancado">Fazer exercícios</a></div></article>
+      <article class="topic-card"><h3>Problemas desafiadores</h3><p>Combine várias ideias matemáticas para resolver situações complexas.</p><div class="topic-actions"><a class="topic-button study" href="conteudo.html?materia=matematica&topico=desafios">Estudar</a><a class="topic-button exercise" href="exercicios.html?materia=matematica&nivel=avancado">Fazer exercícios</a></div></article>
+    </div>
+    <section id="matematica-segundo-grau" class="lesson-detail"><h3>Equações do 2º grau</h3><p>Essas equações têm a forma ax² + bx + c = 0 e podem ter duas, uma ou nenhuma raiz real.</p></section>
+    <section id="matematica-funcoes" class="lesson-detail"><h3>Funções e gráficos</h3><p>Funções mostram como uma variável depende de outra. Os gráficos ajudam a visualizar essa relação.</p></section>
+    <section id="matematica-desafios" class="lesson-detail"><h3>Problemas desafiadores</h3><p>Problemas mais difíceis pedem leitura cuidadosa, planejamento e verificação do resultado.</p></section>
+  </div>
+  </main>
+  <script src="../script.js"></script>
+</body>
+
+</html>
